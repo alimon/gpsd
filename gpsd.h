@@ -219,6 +219,7 @@ struct gps_lexer_t {
 #define GEOSTAR_PACKET          14
 #define NMEA2000_PACKET         15
 #define GREIS_PACKET            16
+#define QMI_PDS_PACKET          16
 #define MAX_GPSPACKET_TYPE      16      /* increment this as necessary */
 #define RTCM2_PACKET            17
 #define RTCM3_PACKET            18
@@ -456,6 +457,7 @@ typedef enum {source_unknown,
               source_usb,       /* potential GPS source, discoverable */
               source_bluetooth, /* potential GPS source, discoverable */
               source_can,       /* potential GPS source, fixed CAN format */
+              source_qrtr,	/* potential GPS source, discoverable */
               source_pty,       /* PTY: we don't require exclusive access */
               source_tcp,       /* TCP/IP stream: case detected but not used */
               source_udp,       /* UDP stream: case detected but not used */
